@@ -17,13 +17,13 @@ def split_data(data, test_size=0.2, random_state=42):
     return X_train, X_test, y_train, y_test 
 
 if __name__ == "__main__":
-    # I am loading the dataset
+    # loading the dataset
     data = load_data('creditcard.csv')
     print('Shape of the full dataset:', data.shape)
     # I am splitting the data
     X_train, X_test, y_train, y_test = split_data(data)
-    print('Shape of X_train:', X_train.shape)
-    print('Shape of X_test:', X_test.shape)
-    print('Shape of y_train:', y_train.shape)
-    print('Shape of y_test:', y_test.shape)
-    print('Class distribution in y_train:', y_train.value_counts()) 
+    print('Shape of X_train:', X_train.shape) # type: ignore
+    print('Shape of X_test:', X_test.shape) # type: ignore
+    print('Shape of y_train:', y_train.shape) # type: ignore
+    print('Shape of y_test:', y_test.shape) # type: ignore
+    print('Class distribution in y_train:', y_train.value_counts()) # type: ignore
